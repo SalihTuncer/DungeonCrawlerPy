@@ -1,4 +1,3 @@
-
 from abc import ABC, abstractmethod
 from typing import Dict
 import random as r
@@ -35,11 +34,11 @@ class character(ABC):
             if key in changes:
                 self.__attributes[key] += value
 
-    def get_attributes(self):
-        return self.__attributes
-
     def is_alive(self):
         return self.hp > 0
 
     def ready_to_level_up(self):
         return self.__xp >= self.__lvl * 3
+
+    def get_attributes(self):
+        return self.__attributes
