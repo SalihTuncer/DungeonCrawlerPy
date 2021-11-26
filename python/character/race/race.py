@@ -1,8 +1,8 @@
 from abc import ABC
-from ..enemy import enemy
+from .. import enemy
 
 
-class race(enemy, ABC):
+class Race(enemy.Enemy, ABC):
 
     def __init__(self) -> None:
         super().__init__()

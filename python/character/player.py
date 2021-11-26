@@ -1,7 +1,7 @@
-from .character import character
+from . import character
 
 
-class player(character):
+class Player(character.Character):
 
     def __init__(self) -> None:
         super().__init__()

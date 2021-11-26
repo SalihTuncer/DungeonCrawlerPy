@@ -1,7 +1,7 @@
-from .race import race
+from . import race
 
 
-class orc(race):
+class Orc(race.Race):
 
     def __init__(self) -> None:
         super().__init__()

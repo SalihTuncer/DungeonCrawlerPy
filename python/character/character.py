@@ -3,13 +3,14 @@ from typing import Dict
 import random as r
 
 
-class character(ABC):
+class Character(ABC):
     # basic attributes of the Characters in the game
     __attributes = {}
     # equipment
     __equipment = {}
 
     def __init__(self) -> None:
+        super().__init__()
         self.generate_attributes()
 
     @abstractmethod
@@ -42,3 +43,6 @@ class character(ABC):
 
     def get_attributes(self):
         return self.__attributes
+
+    def set_name(self, name):
+        self.__attributes['name'] = name
